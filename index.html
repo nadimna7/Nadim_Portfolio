@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nadim Ansari – Textile Engineer, Developer, Entrepreneur</title>
+<meta name="description" content="Nadim Ansari is a textile engineer, developer and entrepreneur building technology for garment manufacturing.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='black'/><path d='M8 24V8l16 16V8' stroke='white' stroke-width='3' fill='none'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000; --paper:#ecebe6; --ink:#16161a; --mute-d:#8c8c93; --mute-l:#62626a;
+  --indigo-d:#8a97ff; --indigo-l:#3340b8;
+  --font:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(1.25rem,6vw,5rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--indigo-d);outline-offset:4px}
+.wrap{max-width:1240px;margin:0 auto}
+section{padding:clamp(5rem,12vw,10rem) var(--pad)}
+.dark{background:var(--black);color:var(--paper)}
+.dark .mute{color:var(--mute-d)} .light .mute{color:var(--mute-l)}
+h2{font-weight:600;letter-spacing:-.035em;line-height:1.02;font-size:clamp(2.2rem,5.5vw,4.5rem)}
+h3{font-weight:600;letter-spacing:-.02em;font-size:1.5rem;line-height:1.2}
+p{max-width:58ch}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:1.25rem var(--pad);color:#fff;mix-blend-mode:difference}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem}
+nav ul{display:flex;gap:clamp(1rem,3vw,2.25rem);list-style:none}
+nav ul a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s}
+nav ul a:hover{background-size:100% 1px}
+@media(max-width:560px){nav ul li:nth-child(n+3){display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:clamp(3rem,8vw,6rem)}
+#weave{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .wrap{position:relative;width:100%;pointer-events:none}
+.hero a{pointer-events:auto}
+.hero h1{font-weight:700;letter-spacing:-.055em;line-height:.88;font-size:clamp(3.6rem,15vw,12.5rem)}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.14s}
+.hero .sub{margin-top:clamp(1.5rem,3vw,2.5rem);font-size:clamp(1.1rem,2vw,1.5rem);line-height:1.4;max-width:34ch;opacity:0;animation:fade 1s .7s forwards}
+.hero .cta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;animation:fade 1s .9s forwards}
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:.9rem 1.5rem;border-radius:999px;border:1px solid currentColor;transition:background .25s,color .25s,border-color .25s}
+.btn.solid{background:var(--paper);color:var(--black);border-color:var(--paper)}
+.btn.solid:hover{background:var(--indigo-d);border-color:var(--indigo-d)}
+.btn.ghost:hover{background:var(--paper);color:var(--black)}
+
+/* what I do */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3.5rem);margin-top:clamp(3rem,7vw,5.5rem)}
+.cols article{border-top:1px solid var(--ink);padding-top:1.5rem}
+.cols p{margin-top:.9rem}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+
+/* AS-3 */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.split p{margin-top:1.5rem}
+.split .btn{margin-top:2rem}
+.swatch{aspect-ratio:4/3;border-radius:6px;position:relative;overflow:hidden;
+  background:
+   repeating-linear-gradient(90deg,rgba(138,151,255,.85) 0 6px,transparent 6px 12px),
+   repeating-linear-gradient(0deg,rgba(236,235,230,.9) 0 6px,transparent 6px 12px),
+   #1a1d3d;
+  background-blend-mode:normal}
+.swatch::after{content:"";position:absolute;inset:0;background:
+   repeating-linear-gradient(0deg,rgba(0,0,0,.55) 0 6px,transparent 6px 12px),
+   repeating-linear-gradient(90deg,transparent 0 6px,rgba(0,0,0,.45) 6px 12px);
+  mix-blend-mode:multiply;transform:translate(6px,6px)}
+.swatch::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,transparent 55%,rgba(0,0,0,.65))}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+
+/* journey */
+.journey{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(2rem,6vw,6rem)}
+.journey h2{position:sticky;top:6rem;align-self:start}
+.journey ol{list-style:none;counter-reset:s}
+.journey li{counter-increment:s;display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;padding:1.6rem 0;border-top:1px solid var(--ink)}
+.journey li:last-child{border-bottom:1px solid var(--ink)}
+.journey li::before{content:counter(s,decimal-leading-zero);color:var(--indigo-l);font-weight:600}
+.journey li p{margin-top:.35rem}
+@media(max-width:860px){.journey{grid-template-columns:1fr}.journey h2{position:static}}
+
+/* vision */
+.vision p.big{font-weight:600;letter-spacing:-.035em;line-height:1.05;font-size:clamp(2rem,6.2vw,5.5rem);max-width:18ch}
+.vision p.big em{font-style:normal;color:var(--indigo-d)}
+.vision p.small{margin-top:2.5rem}
+
+/* contact */
+.contact h2 a{text-decoration:none;background:linear-gradient(var(--indigo-l),var(--indigo-l)) 0 100%/100% 3px no-repeat;transition:background-size .3s,color .3s}
+.contact h2 a:hover{background-size:100% 100%;color:var(--paper)}
+.links{list-style:none;margin-top:clamp(3rem,7vw,5rem);display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.links a{display:block;text-decoration:none;font-weight:600;border-top:1px solid var(--ink);padding-top:1rem;transition:color .25s,border-color .25s}
+.links a:hover{color:var(--indigo-l);border-color:var(--indigo-l)}
+@media(max-width:700px){.links{grid-template-columns:1fr 1fr}}
+footer{padding:2rem var(--pad);background:var(--paper);color:var(--mute-l);font-size:.9rem;border-top:1px solid rgba(0,0,0,.12)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero h1 span i{animation:none;transform:none}
+  .hero .sub,.hero .cta{animation:none;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <a href="#top">Nadim Ansari</a>
+  <ul>
+    <li><a href="#as3">AS-3</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="top">
+
+<header class="hero dark">
+  <canvas id="weave" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1><span><i>Nadim</i></span><span><i>Ansari</i></span></h1>
+    <p class="sub">Textile engineer, developer and entrepreneur, building technology for garment manufacturing.</p>
+    <div class="cta">
+      <a class="btn solid" href="#contact">Get in touch</a>
+      <a class="btn ghost" href="#journey">See my journey</a>
+    </div>
+  </div>
+</header>
+
+<section class="light" id="work">
+  <div class="wrap">
+    <h2>Fabric, code<br>and business.</h2>
+    <div class="cols">
+      <article>
+        <h3>Textile engineering</h3>
+        <p class="mute">I understand how fabric and garments are actually made, from material and process to the finished product.</p>
+      </article>
+      <article>
+        <h3>Development</h3>
+        <p class="mute">I write code to solve real problems, turning manual manufacturing work into clear, working systems.</p>
+      </article>
+      <article>
+        <h3>Business building</h3>
+        <p class="mute">I run a manufacturing business, so every idea gets tested against real production and real customers.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="as3">
+  <div class="wrap split">
+    <div>
+      <h2>AS-3 / S S Saziya Creation</h2>
+      <p class="mute">This is where the manufacturing side of my work lives: making products, and learning first-hand what the production floor needs from technology.</p>
+      <a class="btn ghost" href="#contact">Talk about manufacturing</a>
+    </div>
+    <div class="swatch" role="img" aria-label="Woven indigo fabric swatch"></div>
+  </div>
+</section>
+
+<section class="light" id="journey">
+  <div class="wrap journey">
+    <h2>The path<br>so far.</h2>
+    <ol>
+      <li><div><h3>Education</h3><p class="mute">The textile engineering foundation everything else grew from.</p></div></li>
+      <li><div><h3>NCC</h3><p class="mute">Discipline, teamwork and showing up on time.</p></div></li>
+      <li><div><h3>Mountaineering</h3><p class="mute">Patience, risk and the long climb to a hard goal.</p></div></li>
+      <li><div><h3>Manufacturing</h3><p class="mute">Learning how products get made, and where the process breaks.</p></div></li>
+      <li><div><h3>Technology</h3><p class="mute">Code became a second craft, and a tool for fixing those breaks.</p></div></li>
+      <li><div><h3>Business</h3><p class="mute">Bringing manufacturing and technology together under one roof.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="dark vision" id="vision">
+  <div class="wrap">
+    <p class="big">Technology and garment manufacturing, <em>built together.</em></p>
+    <p class="small mute">My long-term goal is to combine software with the way garments are made, so the factory floor and the code are designed as one system.</p>
+  </div>
+</section>
+
+<section class="light contact" id="contact">
+  <div class="wrap">
+    <!-- EDIT: replace every link below with your own -->
+    <h2><a href="mailto:you@example.com">Say hello.</a></h2>
+    <ul class="links">
+      <li><a href="mailto:you@example.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/your-handle" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Nadim Ansari</footer>
+
+<script>
+/* Woven-thread hero: warp (vertical) threads bend away from the pointer; weft (horizontal) threads form a plain weave. */
+(function(){
+  var c=document.getElementById('weave'),x=c.getContext('2d'),hero=c.parentElement;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var w=0,h=0,mx=-999,my=-999,t=0,gap=18,R=170;
+  function size(){var d=Math.min(window.devicePixelRatio||1,2);w=hero.clientWidth;h=hero.clientHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);}
+  function dx(px,py){var a=px-mx,b=py-my,f=Math.max(0,1-Math.hypot(a,b)/R);return f*f*26*(a<0?-1:1);}
+  function draw(){
+    x.clearRect(0,0,w,h);
+    var cols=Math.ceil(w/gap)+1,rows=Math.ceil(h/gap)+1,i,j,y;
+    x.lineWidth=1;
+    /* warp threads */
+    x.beginPath();
+    for(i=0;i<cols;i++){
+      var bx=i*gap;
+      for(y=0;y<=h;y+=9){
+        var px=bx+dx(bx,y)+(still?0:Math.sin(y*.012+t+i*.4)*1.1);
+        y?x.lineTo(px,y):x.moveTo(px,y);
+      }
+    }
+    x.strokeStyle='rgba(236,235,230,.16)';x.stroke();
+    /* weft threads, plain weave (over / under) */
+    x.beginPath();
+    var hi=[];
+    for(j=0;j<rows;j++){
+      var yy=j*gap+gap/2;
+      for(i=0;i<cols;i++){
+        if((i+j)%2) continue;
+        var x1=i*gap+dx(i*gap,yy),x2=(i+1)*gap+dx((i+1)*gap,yy);
+        x.moveTo(x1,yy);x.lineTo(x2,yy);
+        if(Math.abs(x1-mx)<R&&Math.abs(yy-my)<R)hi.push([x1,x2,yy]);
+      }
+    }
+    x.strokeStyle='rgba(236,235,230,.34)';x.stroke();
+    /* accent where the pointer is */
+    x.beginPath();
+    for(var k=0;k<hi.length;k++){var s=hi[k];if(Math.hypot(s[0]-mx,s[2]-my)<R*.8){x.moveTo(s[0],s[2]);x.lineTo(s[1],s[2]);}}
+    x.strokeStyle='rgba(138,151,255,.95)';x.lineWidth=1.6;x.stroke();
+  }
+  function loop(){t+=.012;draw();requestAnimationFrame(loop);}
+  function move(e){var r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;}
+  size();window.addEventListener('resize',size);
+  if(still){draw();return;}
+  hero.addEventListener('pointermove',move);
+  hero.addEventListener('pointerleave',function(){mx=my=-999;});
+  loop();
+})();
+</script>
+</body>
+</html>
